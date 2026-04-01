@@ -1,0 +1,36 @@
+[
+  {
+    "id": "nit-calicut",
+    "company": "National Institute of Technology, Calicut",
+    "role": "B.Tech. in Civil Engineering",
+    "period": "Aug 2023 - Present",
+    "description": "Currently pursuing undergraduate studies with a focus on engineering principles and system design. Maintaining a CGPA of 7.5 while actively contributing to technical and management teams.",
+    "points": [
+      "Senior Executive (GPC) at Tathva '24, the annual technical festival of NIT Calicut.",
+      "Senior Member (Tech Team) at Prithvi '24, the annual civil engineering symposium.",
+      "Developing full-stack applications and low-level system designs alongside core curriculum.",
+      "Winner of various coding and technical challenges within the campus environment."
+    ]
+  },
+  {
+    "id": "rnp-12th",
+    "company": "RNP Public School, Chhapra",
+    "role": "12th CBSE (PCM)",
+    "period": "2021 - 2023",
+    "description": "Completed higher secondary education with a strong focus on Physics, Chemistry, and Mathematics.",
+    "points": [
+      "Achieved a percentage of 85.8 in the CBSE board examinations."
+    ]
+  },
+  {
+    "id": "rnp-10th",
+    "company": "RNP Public School, Chhapra",
+    "role": "10th CBSE",
+    "period": "2019 - 2021",
+    "description": "Foundational secondary education with a track record of academic excellence.",
+    "points": [
+      "Achieved a high percentage of 90.2 in the CBSE board examinations.",
+      "Developed an early interest in software logic and problem-solving."
+    ]
+  }
+]

@@ -1,0 +1,75 @@
+[
+  {
+    "id": "logic-lab",
+    "title": "LogicLab",
+    "description": "A comprehensive full-stack coding platform featuring an online judge system. Built with secure user authentication and problem management workflows.",
+    "tech": ["React", "Node.js", "Express", "MongoDB", "Redis", "Judge0"],
+    "github": "https://github.com/RIshabh231singh-shr/LogicLab",
+    "live": "#",
+    "featured": true,
+    "details": [
+      "Built a full-stack coding platform supporting problem solving, submission evaluation, and user authentication.",
+      "Designed RESTful APIs using Node.js and Express for handling problem submissions, user management, and evaluation workflows.",
+      "Structured MongoDB schema to efficiently manage problems, users, and submissions for scalable data access.",
+      "Integrated Redis caching to optimize frequently accessed data and reduce database load.",
+      "Implemented secure authentication and role-based access control using JWT and middleware.",
+      "Developed responsive frontend using React hooks for efficient state and UI management."
+    ]
+  },
+  {
+    "id": "swigito",
+    "title": "Swigito",
+    "description": "An object-oriented backend design for a food delivery system simulating core workflows and scalable restaurant discovery.",
+    "tech": ["C++", "STL", "OOP", "Design Patterns"],
+    "github": "https://github.com/RIshabh231singh-shr/Swigito",
+    "live": "#",
+    "featured": true,
+    "details": [
+      "Architected a scalable backend system simulating core food delivery workflows including restaurant discovery, cart handling, and order processing.",
+      "Applied design patterns (Strategy, Factory, Singleton) to decouple components and enable extensible system behavior.",
+      "Designed flexible abstractions for multiple order types and pluggable modules, allowing easy addition of new features without modifying core logic.",
+      "Structured the codebase into layered components (models, managers, services) to improve maintainability and separation of concerns."
+    ]
+  },
+  {
+    "id": "dialysis-monitor",
+    "title": "Dialysis Monitor",
+    "description": "A real-time medical dashboard tracking patient vitals with anomaly detection for effective health monitoring.",
+    "tech": ["React", "Nivo", "Express", "WebSockets"],
+    "github": "https://github.com/RIshabh231singh-shr/Dialysis_Dashboard",
+    "live": "#",
+    "featured": true,
+    "details": [
+      "Developed a real-time data visualization dashboard for complex medical hardware monitors.",
+      "Integrated smart anomaly detection algorithms to alert medical staff of critical patient health metrics.",
+      "Utilized WebSockets for low-latency bi-directional communication between the server and hardware simulation."
+    ]
+  },
+  {
+    "id": "lld-mini",
+    "title": "LLD Mini Projects",
+    "description": "A collection of Low-Level Design (LLD) implementations for common system design problems and OOP challenges.",
+    "tech": ["C++", "Solid Principles", "Design Patterns"],
+    "github": "https://github.com/RIshabh231singh-shr/LLD_mini_PROJECTS",
+    "live": "#",
+    "featured": false,
+    "details": [
+      "Implemented standard LLD problems like Parking Lot, Tic-Tac-Toe, and Snake & Ladder with robust OOP architecture.",
+      "Focused on SOLID principles and clean code practices for maintainable software modules."
+    ]
+  },
+  {
+    "id": "stoodomart",
+    "title": "StoodoMart",
+    "description": "A student-centric marketplace application for listings and peer-to-peer item management.",
+    "tech": ["Java", "Firebase", "Android SDK"],
+    "github": "https://github.com/RIshabh231singh-shr/StoodoMart",
+    "live": "#",
+    "featured": false,
+    "details": [
+      "Designed an intuitive mobile interface for peer-to-peer student commerce.",
+      "Integrated Firebase for real-time database updates and user authentication.",
+      "Implemented a secure category-based search and filter system for product listings."
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "category": "Frontend",
+    "icon": "Layout",
+    "items": ["React.js", "Next.js", "Tailwind CSS", "Framer Motion", "Shadcn/UI"]
+  },
+  {
+    "category": "Backend",
+    "icon": "Database",
+    "items": ["Node.js", "Express", "MongoDB", "Redis", "Judge0"]
+  },
+  {
+    "category": "Languages & Systems",
+    "icon": "Cpu",
+    "items": ["C++", "C", "JavaScript", "System Design", "OOP"]
+  }
+]
