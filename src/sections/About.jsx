@@ -6,6 +6,7 @@ import skillsData from '../data/skills.json';
 import profile from '../data/profile.json';
 import { Layout, Database, Cpu, Globe, Code2, Terminal, BookOpen, Download } from 'lucide-react';
 import { Button } from '../components/Button';
+import { AnimatedCounter } from '../components/AnimatedCounter';
 
 const iconMap = {
   Layout: Layout,
@@ -41,12 +42,16 @@ export const About = () => {
             
             <div className="pt-10 flex flex-wrap items-center gap-10">
               <div className="flex flex-col gap-1">
-                <span className="text-4xl font-black text-primary font-heading tracking-tighter">{profile.stats.cgpa}</span>
+                <span className="text-4xl font-black text-primary font-heading tracking-tighter">
+                  <AnimatedCounter value={profile.stats.cgpa} duration={1.5} />
+                </span>
                 <span className="text-[10px] font-mono text-secondary uppercase tracking-[0.3em]">B.TECH CGPA</span>
               </div>
               <div className="w-[1px] h-10 bg-white/10 hidden sm:block"></div>
               <div className="flex flex-col gap-1">
-                <span className="text-4xl font-black text-primary font-heading tracking-tighter">{profile.stats.projects}</span>
+                <span className="text-4xl font-black text-primary font-heading tracking-tighter">
+                  <AnimatedCounter value={profile.stats.projects} duration={2} />
+                </span>
                 <span className="text-[10px] font-mono text-secondary uppercase tracking-[0.3em]">ENG. SYSTEMS</span>
               </div>
             </div>

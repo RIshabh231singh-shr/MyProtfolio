@@ -50,7 +50,7 @@ export const Navbar = () => {
 
   return (
     <nav className={cn(
-      "fixed top-0 left-0 right-0 z-[100] transition-all duration-500 py-4",
+      "fixed top-0 left-0 right-0 z-[1000] transition-all duration-500 py-4",
       scrolled ? "bg-background/80 backdrop-blur-xl border-b border-white/5 py-3" : "bg-transparent"
     )}>
       <div className="max-w-[1440px] 2xl:max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20 flex items-center justify-between w-full">
@@ -126,9 +126,9 @@ export const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 top-[72px] bg-background/95 backdrop-blur-2xl z-50 lg:hidden flex flex-col items-center justify-center gap-12 p-12"
+            className="fixed inset-0 top-0 bg-background z-[900] lg:hidden flex flex-col items-center justify-center gap-12 p-8"
           >
-            <div className="flex flex-col items-center gap-8">
+            <div className="flex flex-col items-center gap-10 w-full">
               {navLinks.map((link, idx) => (
                 <motion.a
                   initial={{ opacity: 0, y: 20 }}
@@ -137,9 +137,9 @@ export const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-4xl font-bold font-heading text-primary hover:text-accent-cyan transition-colors text-center"
+                  className="w-full text-5xl font-black font-heading text-primary hover:text-accent-cyan transition-colors flex flex-col items-center gap-2 group"
                 >
-                  <span className="text-sm font-mono text-accent-cyan block mb-2">{link.id}.</span>
+                  <span className="text-sm font-mono text-accent-cyan opacity-80 mb-1">{link.id}.</span>
                   {link.name}
                 </motion.a>
               ))}

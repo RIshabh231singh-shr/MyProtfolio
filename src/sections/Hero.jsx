@@ -4,6 +4,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import { Github } from 'lucide-react';
 import { Button } from '../components/Button';
 import { SectionWrapper } from '../components/SectionWrapper';
+import { AnimatedCounter } from '../components/AnimatedCounter';
 import profile from '../data/profile.json';
 
 export const Hero = () => {
@@ -83,11 +84,15 @@ export const Hero = () => {
             className="flex items-center justify-center md:justify-start gap-12 pt-8 border-t border-border"
           >
              <div className="flex flex-col">
-               <span className="text-2xl font-black text-primary font-heading tracking-tighter">{stats.problems}</span>
+               <span className="text-2xl font-black text-primary font-heading tracking-tighter">
+                 <AnimatedCounter value={stats.problems} duration={2} />
+               </span>
                <span className="text-[10px] font-mono text-secondary uppercase tracking-widest">Solved</span>
              </div>
              <div className="flex flex-col border-l border-border pl-12">
-               <span className="text-2xl font-black text-primary font-heading tracking-tighter">{stats.score}</span>
+               <span className="text-2xl font-black text-primary font-heading tracking-tighter">
+                 <AnimatedCounter value={stats.score} duration={2.5} />
+               </span>
                <span className="text-[10px] font-mono text-secondary uppercase tracking-widest">GFG Score</span>
              </div>
           </motion.div>
@@ -110,7 +115,7 @@ export const Hero = () => {
                 <img 
                   src={avatar} 
                   alt={name} 
-                  className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000 filter grayscale group-hover:grayscale-0 contrast-[1.1]"
+                  className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000 contrast-[1.1]"
                 />
               </div>
             </div>
