@@ -47,7 +47,7 @@ export const ProjectModal = ({ project, isOpen, onClose }) => {
           </div>
 
           {/* Scrollable Body */}
-          <div className="flex-1 overflow-y-auto p-6 md:p-10 custom-scrollbar">
+          <div className="flex-1 overflow-y-auto p-6 md:p-10 hide-scrollbar">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
               
               {/* Left Column: Details */}

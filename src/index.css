@@ -90,7 +90,11 @@
   }
 
   .shine-effect {
-    @apply relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-shimmer before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent;
+    @apply relative overflow-hidden;
+    
+    &::before {
+      @apply absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/10 to-transparent content-[''];
+    }
   }
 
   /* Utility to hide scrollbar but keep functionality */
@@ -115,4 +119,27 @@
 ::-webkit-scrollbar-thumb {
   background: var(--border);
   border-radius: 9999px;
+}
+
+/* Custom Scrollbar for inner containers */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-cyan);
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
 }

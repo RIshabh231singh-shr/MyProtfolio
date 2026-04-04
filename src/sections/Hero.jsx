@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
-import { Github } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { Button } from '../components/Button';
 import { SectionWrapper } from '../components/SectionWrapper';
 import { AnimatedCounter } from '../components/AnimatedCounter';
@@ -9,6 +9,19 @@ import profile from '../data/profile.json';
 
 export const Hero = () => {
   const { name, avatar, socials, stats } = profile;
+
+  // Custom Icons
+  const GFGIcon = () => (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.12 16.51c-2.47-.19-4.38-2.27-4.38-4.78 0-2.65 2.15-4.8 4.8-4.8 1.13 0 2.16.4 2.97 1.06l-1.03 1.03c-.53-.43-1.2-.69-1.94-.69-1.55 0-2.8 1.25-2.8 2.8 0 1.4.91 2.58 2.18 2.77v-2.07h1.4v3.68h-1.2zm5.72-3.11c-.53.43-1.2.69-1.94.69-1.55 0-2.8-1.25-2.8-2.8s1.25-2.8 2.8-2.8c.74 0 1.41.26 1.94.69l1.03-1.03c-.81-.66-1.84-1.06-2.97-1.06-2.65 0-4.8 2.15-4.8 4.8s2.15 4.8 4.8 4.8c1.13 0 2.16-.4 2.97-1.06l-1.03-1.03z"/>
+    </svg>
+  );
+
+  const LeetCodeIcon = () => (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M13.483 0a1.374 1.374 0 0 0-.961.414l-9.77 9.77a1.375 1.375 0 0 0 0 1.945l1.944 1.945a1.375 1.375 0 0 0 1.945 0l7.828-7.828a1.373 1.373 0 0 0 0-1.945L14.444.414a1.374 1.374 0 0 0-.961-.414zM12 9.29a1.286 1.286 0 0 0-.91.376l-1.928 1.928a1.286 1.286 0 0 0 0 1.82l1.928 1.928c.503.503 1.317.503 1.82 0l1.928-1.928a1.286 1.286 0 0 0 0-1.82l-1.928-1.928A1.286 1.286 0 0 0 12 9.29zM23.973 12.001a1.286 1.286 0 0 0-.376-.91l-1.928-1.928a1.286 1.286 0 0 0-1.82 0l-1.928 1.928a1.286 1.286 0 0 0 0 1.82l1.928 1.928c.503.503 1.317.503 1.82 0l1.928-1.928a1.286 1.286 0 0 0 .376-.91z"/>
+    </svg>
+  );
 
   return (
     <div id="home" className="min-h-screen pt-24 md:pt-32 flex items-center relative overflow-hidden bg-background">
@@ -126,12 +139,18 @@ export const Hero = () => {
               </div>
             </div>
             
-            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-3 bg-card border border-border shadow-2xl p-2 rounded-2xl backdrop-blur-xl opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-               <a href={socials.github} target="_blank" rel="noreferrer" className="p-3 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl text-secondary hover:text-accent-cyan transition-colors">
-                  <Github size={20} />
+            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-card border border-border shadow-2xl p-1.5 rounded-2xl backdrop-blur-xl opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+               <a href={socials.github} target="_blank" rel="noreferrer" className="p-2.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl text-secondary hover:text-accent-cyan transition-colors" title="GitHub">
+                  <Github size={18} />
                </a>
-               <a href={socials.geeksforgeeks} target="_blank" rel="noreferrer" className="p-3 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl text-secondary hover:text-accent-cyan transition-colors">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+               <a href={socials.linkedin} target="_blank" rel="noreferrer" className="p-2.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl text-secondary hover:text-accent-purple transition-colors" title="LinkedIn">
+                  <Linkedin size={18} />
+               </a>
+               <a href={socials.leetcode} target="_blank" rel="noreferrer" className="p-2.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl text-secondary hover:text-orange-500 transition-colors" title="LeetCode">
+                  <LeetCodeIcon />
+               </a>
+               <a href={socials.geeksforgeeks} target="_blank" rel="noreferrer" className="p-2.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl text-secondary hover:text-green-500 transition-colors" title="GeeksforGeeks">
+                  <GFGIcon />
                </a>
             </div>
           </div>

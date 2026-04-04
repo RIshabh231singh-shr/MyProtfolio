@@ -20,10 +20,16 @@ import { Button } from '../components/Button';
 import { Card } from '../components/Card';
 import profile from '../data/profile.json';
 
-// Custom GFG Icon
+// Custom Icons
 const GFGIcon = ({ size = 20, className }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.12 16.51c-2.47-.19-4.38-2.27-4.38-4.78 0-2.65 2.15-4.8 4.8-4.8 1.13 0 2.16.4 2.97 1.06l-1.03 1.03c-.53-.43-1.2-.69-1.94-.69-1.55 0-2.8 1.25-2.8 2.8 0 1.4.91 2.58 2.18 2.77v-2.07h1.4v3.68h-1.2zm5.72-3.11c-.53.43-1.2.69-1.94.69-1.55 0-2.8-1.25-2.8-2.8s1.25-2.8 2.8-2.8c.74 0 1.41.26 1.94.69l1.03-1.03c-.81-.66-1.84-1.06-2.97-1.06-2.65 0-4.8 2.15-4.8 4.8s2.15 4.8 4.8 4.8c1.13 0 2.16-.4 2.97-1.06l-1.03-1.03z"/>
+  </svg>
+);
+
+const LeetCodeIcon = ({ size = 20, className }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M13.483 0a1.374 1.374 0 0 0-.961.414l-9.77 9.77a1.375 1.375 0 0 0 0 1.945l1.944 1.945a1.375 1.375 0 0 0 1.945 0l7.828-7.828a1.373 1.373 0 0 0 0-1.945L14.444.414a1.374 1.374 0 0 0-.961-.414zM12 9.29a1.286 1.286 0 0 0-.91.376l-1.928 1.928a1.286 1.286 0 0 0 0 1.82l1.928 1.928c.503.503 1.317.503 1.82 0l1.928-1.928a1.286 1.286 0 0 0 0-1.82l-1.928-1.928A1.286 1.286 0 0 0 12 9.29zM23.973 12.001a1.286 1.286 0 0 0-.376-.91l-1.928-1.928a1.286 1.286 0 0 0-1.82 0l-1.928 1.928a1.286 1.286 0 0 0 0 1.82l1.928 1.928c.503.503 1.317.503 1.82 0l1.928-1.928a1.286 1.286 0 0 0 .376-.91z"/>
   </svg>
 );
 
@@ -102,8 +108,11 @@ export const Contact = () => {
             <a href={profile.socials.linkedin} target="_blank" rel="noreferrer" className="p-3.5 bg-white/5 border border-white/10 rounded-xl text-secondary hover:text-accent-purple hover:border-accent-purple/40 transition-all hover:-translate-y-1" aria-label="LinkedIn">
               <Linkedin size={20} />
             </a>
-            <a href={profile.socials.geeksforgeeks} target="_blank" rel="noreferrer" className="p-3.5 bg-white/5 border border-white/10 rounded-xl text-secondary hover:text-accent-cyan hover:border-accent-cyan/40 transition-all hover:-translate-y-1" aria-label="GFG">
+            <a href={profile.socials.geeksforgeeks} target="_blank" rel="noreferrer" className="p-3.5 bg-white/5 border border-white/10 rounded-xl text-secondary hover:text-green-500 hover:border-green-500/40 transition-all hover:-translate-y-1" aria-label="GFG">
               <GFGIcon size={20} />
+            </a>
+            <a href={profile.socials.leetcode} target="_blank" rel="noreferrer" className="p-3.5 bg-white/5 border border-white/10 rounded-xl text-secondary hover:text-orange-500 hover:border-orange-500/40 transition-all hover:-translate-y-1" aria-label="LeetCode">
+              <LeetCodeIcon size={20} />
             </a>
           </div>
         </div>

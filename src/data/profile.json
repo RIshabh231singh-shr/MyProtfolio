@@ -3,7 +3,8 @@
   "title": "Aspiring Software Development Engineer",
   "tagline": "Building scalable full-stack applications with strong backend architecture, caching, and system design.",
   "bio": "I am an aspiring Software Development Engineer currently pursuing B.Tech at NIT Calicut, with a strong focus on full-stack development, low-level design, and scalable system architecture. I have built and deployed multiple production-ready applications using the MERN stack, integrating Redis caching, load balancing strategies, and cloud services. My work includes designing systems with design patterns, implementing real-world features like anomaly detection, and optimizing performance through efficient backend engineering. I have solved 500+ algorithmic problems and actively strengthen my problem-solving and system design skills.",
-  "avatar": "https://avatars.githubusercontent.com/u/207320600?v=4",
+  "avatar": "/assets/avatar.png",
+  "resume": "/assets/resume.pdf",
   "email": "rishabhsinghnitian231@gmail.com",
   "socials": {
     "github": "https://github.com/RIshabh231singh-shr/",

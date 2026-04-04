@@ -72,15 +72,17 @@ export const About = () => {
                      LinkedIn <BookOpen size={16} />
                   </Button>
                </a>
-               <Button variant="outline" className="gap-3 group px-8 font-bold text-xs uppercase tracking-widest">
-                  Resume Copy <Download size={16} className="group-hover:translate-y-1 transition-transform" />
-               </Button>
+              <a href={profile.resume} target="_blank" rel="noreferrer">
+                <Button variant="outline" className="gap-3 group px-8 font-bold text-xs uppercase tracking-widest w-full sm:w-auto">
+                   Resume Copy <Download size={16} className="group-hover:translate-y-1 transition-transform" />
+                </Button>
+              </a>
             </div>
           </motion.div>
         </div>
 
         {/* Right Column: Skills Grid */}
-        <div className="w-full lg:w-1/2 grid grid-cols-1 gap-8 relative">
+        <div className="w-full lg:w-1/2 grid grid-cols-1 gap-8 relative max-h-[800px] overflow-y-auto pr-4 hide-scrollbar py-4">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-accent-cyan/10 blur-[100px] rounded-full pointer-events-none"></div>
           
           {skillsData.map((skillGroup, index) => {
@@ -102,17 +104,19 @@ export const About = () => {
                   </h3>
                 </div>
                 
-                <ul className="grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-6">
-                  {skillGroup.items.map((item, idx) => (
-                     <li 
-                       key={idx} 
-                       className="flex items-center gap-3 text-sm text-secondary/80 font-mono hover:text-accent-cyan transition-all duration-300 group/item"
-                     >
-                        <span className="text-accent-cyan/40 text-[10px] group-hover/item:translate-x-1 transition-transform">▹</span>
-                        {item}
-                     </li>
-                  ))}
-                </ul>
+                <div className="max-h-48 overflow-y-auto pr-2 hide-scrollbar">
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-6">
+                    {skillGroup.items.map((item, idx) => (
+                       <li 
+                         key={idx} 
+                         className="flex items-center gap-3 text-sm text-secondary/80 font-mono hover:text-accent-cyan transition-all duration-300 group/item"
+                       >
+                          <span className="text-accent-cyan/40 text-[10px] group-hover/item:translate-x-1 transition-transform">▹</span>
+                          {item}
+                       </li>
+                    ))}
+                  </ul>
+                </div>
               </Card>
             );
           })}

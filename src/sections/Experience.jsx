@@ -28,14 +28,8 @@ export const Experience = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="relative shrink-0 snap-center w-[85vw] md:w-[450px] flex flex-col pt-12"
             >
-              {/* Dot marker on the timeline */}
-              <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 -top-[23px] w-4 h-4 bg-accent-cyan rounded-full shadow-[0_0_15px_rgba(56,189,248,0.8)] z-20 border-4 border-background"></div>
-              
-              {/* Vertical branch line */}
-              <div className="absolute left-[31px] md:left-1/2 top-[0] w-[2px] h-12 bg-gradient-to-b from-accent-cyan/50 to-transparent z-10 md:-translate-x-1/2"></div>
-
               {/* Content Card */}
-              <Card className="z-20 h-full p-8 border hover:border-accent-cyan/30 transition-all duration-500 hover:-translate-y-1 bg-white/5 dark:bg-white/5 bg-card">
+              <Card className="z-20 h-[500px] flex flex-col p-8 border hover:border-accent-cyan/30 transition-all duration-500 hover:-translate-y-1 bg-white/5 dark:bg-white/5 bg-card">
                 
                 {/* Role */}
                 <div className="flex items-center gap-3 mb-6">
@@ -61,18 +55,20 @@ export const Experience = () => {
                   </div>
                 </div>
 
-                {/* Bullet Points */}
-                <ul className="space-y-4">
-                  {exp.points.map((bullet, idx) => (
-                    <li 
-                      key={idx} 
-                      className="flex items-start gap-4 text-sm text-secondary font-light leading-relaxed"
-                    >
-                      <CheckCircle2 size={16} className="text-accent-cyan shrink-0 mt-1 opacity-60" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Bullet Points - Scrollable Area */}
+                <div className="flex-1 overflow-y-auto pr-2 hide-scrollbar">
+                  <ul className="space-y-4">
+                    {exp.points.map((bullet, idx) => (
+                      <li 
+                        key={idx} 
+                        className="flex items-start gap-4 text-sm text-secondary font-light leading-relaxed"
+                      >
+                        <CheckCircle2 size={16} className="text-accent-cyan shrink-0 mt-1 opacity-60" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
               </Card>
             </motion.div>
