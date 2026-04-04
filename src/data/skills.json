@@ -2,16 +2,41 @@
   {
     "category": "Frontend",
     "icon": "Layout",
-    "items": ["React.js", "Next.js", "Tailwind CSS", "Framer Motion", "Shadcn/UI"]
+    "items": [
+      "React.js",
+      "Redux Toolkit",
+      "React Router",
+      "Tailwind CSS",
+      "HTML",
+      "CSS",
+      "JavaScript (ES6+)"
+    ]
   },
   {
-    "category": "Backend",
+    "category": "Backend & Infrastructure",
     "icon": "Database",
-    "items": ["Node.js", "Express", "MongoDB", "Redis", "Judge0"]
+    "items": [
+      "Node.js",
+      "Express.js",
+      "MongoDB (Mongoose)",
+      "Redis (Caching & Rate Limiting)",
+      "REST API Design",
+      "JWT Authentication",
+      "Cloudinary",
+      "Judge0 API Integration"
+    ]
   },
   {
-    "category": "Languages & Systems",
+    "category": "Core CS & System Design",
     "icon": "Cpu",
-    "items": ["C++", "C", "JavaScript", "System Design", "OOP"]
+    "items": [
+      "C++",
+      "C",
+      "Data Structures & Algorithms",
+      "Object-Oriented Programming",
+      "Low-Level Design (LLD)",
+      "Design Patterns (Observer, Strategy, Factory, etc.)",
+      "System Design Fundamentals"
+    ]
   }
 ]

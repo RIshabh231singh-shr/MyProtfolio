@@ -4,12 +4,14 @@
     "company": "National Institute of Technology, Calicut",
     "role": "B.Tech. in Civil Engineering",
     "period": "Aug 2023 - Present",
-    "description": "Currently pursuing undergraduate studies with a focus on engineering principles and system design. Maintaining a CGPA of 7.5 while actively contributing to technical and management teams.",
+    "description": "Currently pursuing undergraduate studies at NIT Calicut while actively building expertise in software development, system design, and scalable backend engineering. Balancing core academics with hands-on development of real-world applications and problem-solving.",
     "points": [
-      "Senior Executive (GPC) at Tathva '24, the annual technical festival of NIT Calicut.",
-      "Senior Member (Tech Team) at Prithvi '24, the annual civil engineering symposium.",
-      "Developing full-stack applications and low-level system designs alongside core curriculum.",
-      "Winner of various coding and technical challenges within the campus environment."
+      "Senior Executive (GPC) at Tathva, the annual technical festival of NIT Calicut, contributing to large-scale event coordination and management.",
+      "Senior Member (Tech Team) at Prithvi, actively involved in organizing and supporting technical events and initiatives.",
+      "Built and deployed multiple full-stack applications using MERN stack, Redis caching, and cloud services.",
+      "Implemented system design concepts and low-level design patterns through practical projects and architectures.",
+      "Solved 500+ algorithmic problems across coding platforms, strengthening data structures and problem-solving skills.",
+      "Actively exploring scalable system design, backend optimization, and real-world engineering challenges."
     ]
   },
   {
@@ -17,9 +19,11 @@
     "company": "RNP Public School, Chhapra",
     "role": "12th CBSE (PCM)",
     "period": "2021 - 2023",
-    "description": "Completed higher secondary education with a strong focus on Physics, Chemistry, and Mathematics.",
+    "description": "Completed higher secondary education with a strong foundation in Physics, Chemistry, and Mathematics, building analytical and problem-solving skills.",
     "points": [
-      "Achieved a percentage of 85.8 in the CBSE board examinations."
+      "Achieved 85.8% in CBSE board examinations.",
+      "Developed strong logical reasoning and quantitative aptitude through academic coursework.",
+      "Began exploring programming and computational problem-solving during this period."
     ]
   },
   {
@@ -27,10 +31,11 @@
     "company": "RNP Public School, Chhapra",
     "role": "10th CBSE",
     "period": "2019 - 2021",
-    "description": "Foundational secondary education with a track record of academic excellence.",
+    "description": "Completed secondary education with consistent academic performance and early interest in analytical thinking.",
     "points": [
-      "Achieved a high percentage of 90.2 in the CBSE board examinations.",
-      "Developed an early interest in software logic and problem-solving."
+      "Achieved 90.2% in CBSE board examinations.",
+      "Demonstrated strong problem-solving abilities and interest in logical reasoning.",
+      "Built initial curiosity towards software development and technical problem-solving."
     ]
   }
 ]

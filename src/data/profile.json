@@ -1,8 +1,8 @@
 {
   "name": "Rishabh Singh",
-  "title": "Software Engineer & MERN Stack Developer",
-  "tagline": "Building scalable backend systems and high-impact digital experiences.",
-  "bio": "I am a full-stack engineer and competitive programmer currently at NIT Calicut. I specialize in C++, the MERN stack, and system design, with a strong focus on creating high-performance, architecturally sound applications. I've solved over 450+ algorithmic problems and maintain a 1150+ coding score on GeeksforGeeks.",
+  "title": "Aspiring Software Development Engineer",
+  "tagline": "Building scalable full-stack applications with strong backend architecture, caching, and system design.",
+  "bio": "I am an aspiring Software Development Engineer currently pursuing B.Tech at NIT Calicut, with a strong focus on full-stack development, low-level design, and scalable system architecture. I have built and deployed multiple production-ready applications using the MERN stack, integrating Redis caching, load balancing strategies, and cloud services. My work includes designing systems with design patterns, implementing real-world features like anomaly detection, and optimizing performance through efficient backend engineering. I have solved 500+ algorithmic problems and actively strengthen my problem-solving and system design skills.",
   "avatar": "https://avatars.githubusercontent.com/u/207320600?v=4",
   "email": "rishabhsinghnitian231@gmail.com",
   "socials": {

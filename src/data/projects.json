@@ -2,74 +2,94 @@
   {
     "id": "logic-lab",
     "title": "LogicLab",
-    "description": "A comprehensive full-stack coding platform featuring an online judge system. Built with secure user authentication and problem management workflows.",
-    "tech": ["React", "Node.js", "Express", "MongoDB", "Redis", "Judge0"],
+    "description": "A scalable full-stack coding platform with distributed code execution, AI-powered hints, and optimized backend performance.",
+    "tech": ["React", "Node.js", "Express", "MongoDB", "Redis", "Judge0", "Gemini API"],
     "github": "https://github.com/RIshabh231singh-shr/LogicLab",
     "live": "#",
     "featured": true,
     "details": [
-      "Built a full-stack coding platform supporting problem solving, submission evaluation, and user authentication.",
-      "Designed RESTful APIs using Node.js and Express for handling problem submissions, user management, and evaluation workflows.",
-      "Structured MongoDB schema to efficiently manage problems, users, and submissions for scalable data access.",
-      "Integrated Redis caching to optimize frequently accessed data and reduce database load.",
-      "Implemented secure authentication and role-based access control using JWT and middleware.",
-      "Developed responsive frontend using React hooks for efficient state and UI management."
+      "Engineered a full-stack coding platform supporting real-time code execution, submission evaluation, and role-based authentication.",
+      "Implemented round-robin load balancing across multiple Judge0 APIs to distribute execution requests and improve system reliability.",
+      "Integrated Redis-based caching and sliding window rate limiting to optimize performance and prevent API abuse.",
+      "Designed scalable REST APIs and MongoDB schemas for efficient handling of problems, users, and submissions.",
+      "Built an AI-powered assistant using Gemini API to provide contextual coding hints based on user input and problem state.",
+      "Deployed the application with frontend on Netlify and backend on Vercel, integrating MongoDB Atlas, resolving CORS issues, and managing environment variables securely."
     ]
   },
   {
-    "id": "swigito",
-    "title": "Swigito",
-    "description": "An object-oriented backend design for a food delivery system simulating core workflows and scalable restaurant discovery.",
-    "tech": ["C++", "STL", "OOP", "Design Patterns"],
-    "github": "https://github.com/RIshabh231singh-shr/Swigito",
-    "live": "#",
-    "featured": true,
-    "details": [
-      "Architected a scalable backend system simulating core food delivery workflows including restaurant discovery, cart handling, and order processing.",
-      "Applied design patterns (Strategy, Factory, Singleton) to decouple components and enable extensible system behavior.",
-      "Designed flexible abstractions for multiple order types and pluggable modules, allowing easy addition of new features without modifying core logic.",
-      "Structured the codebase into layered components (models, managers, services) to improve maintainability and separation of concerns."
-    ]
-  },
-  {
-    "id": "dialysis-monitor",
-    "title": "Dialysis Monitor",
-    "description": "A real-time medical dashboard tracking patient vitals with anomaly detection for effective health monitoring.",
-    "tech": ["React", "Nivo", "Express", "WebSockets"],
+    "id": "dialysis-care",
+    "title": "DialysisCare Dashboard",
+    "description": "A real-world healthcare dashboard for dialysis session tracking with anomaly detection and high-performance caching.",
+    "tech": ["React", "Node.js", "Express", "MongoDB", "Redis", "Jest", "Vitest"],
     "github": "https://github.com/RIshabh231singh-shr/Dialysis_Dashboard",
     "live": "#",
     "featured": true,
     "details": [
-      "Developed a real-time data visualization dashboard for complex medical hardware monitors.",
-      "Integrated smart anomaly detection algorithms to alert medical staff of critical patient health metrics.",
-      "Utilized WebSockets for low-latency bi-directional communication between the server and hardware simulation."
-    ]
-  },
-  {
-    "id": "lld-mini",
-    "title": "LLD Mini Projects",
-    "description": "A collection of Low-Level Design (LLD) implementations for common system design problems and OOP challenges.",
-    "tech": ["C++", "Solid Principles", "Design Patterns"],
-    "github": "https://github.com/RIshabh231singh-shr/LLD_mini_PROJECTS",
-    "live": "#",
-    "featured": false,
-    "details": [
-      "Implemented standard LLD problems like Parking Lot, Tic-Tac-Toe, and Snake & Ladder with robust OOP architecture.",
-      "Focused on SOLID principles and clean code practices for maintainable software modules."
+      "Developed a healthcare dashboard to track dialysis sessions with real-time monitoring of patient vitals and treatment data.",
+      "Implemented anomaly detection logic to flag critical conditions such as hypotension and abnormal fluid removal.",
+      "Optimized performance using Redis caching with automatic invalidation for frequently accessed 'Today's Sessions' data.",
+      "Designed end-to-end session lifecycle workflows including scheduling, tracking, and historical data analysis.",
+      "Ensured code reliability with comprehensive testing using Jest, Supertest, Vitest, and React Testing Library."
     ]
   },
   {
     "id": "stoodomart",
     "title": "StoodoMart",
-    "description": "A student-centric marketplace application for listings and peer-to-peer item management.",
-    "tech": ["Java", "Firebase", "Android SDK"],
+    "description": "A campus-focused e-commerce platform enabling peer-to-peer trading with secure authentication and cloud-based media handling.",
+    "tech": ["React", "Node.js", "Express", "MongoDB", "Redux", "Redis", "Cloudinary"],
     "github": "https://github.com/RIshabh231singh-shr/StoodoMart",
+    "live": "#",
+    "featured": true,
+    "details": [
+      "Built a full-stack marketplace platform for students to buy and sell items within campus communities.",
+      "Implemented role-based access control for users, sellers, and admins with secure JWT authentication.",
+      "Integrated Cloudinary for scalable image storage and optimized media delivery.",
+      "Developed advanced filtering and search functionality for efficient product discovery.",
+      "Designed modular backend architecture and collaborated using Git and GitHub for version control."
+    ]
+  },
+  {
+    "id": "swigito",
+    "title": "Swigito (LLD)",
+    "description": "A modular food delivery backend system demonstrating scalable architecture using design patterns and OOP principles.",
+    "tech": ["C++", "OOP", "Design Patterns"],
+    "github": "https://github.com/RIshabh231singh-shr/Swigito",
+    "live": "#",
+    "featured": true,
+    "details": [
+      "Designed a food delivery system simulating real-world workflows including restaurant discovery, cart management, and order processing.",
+      "Applied design patterns such as Singleton, Strategy, and Factory Method to ensure extensibility and maintainability.",
+      "Implemented modular architecture with managers, factories, and services to separate concerns effectively.",
+      "Enabled flexible order creation (instant and scheduled) and pluggable payment strategies."
+    ]
+  },
+  {
+    "id": "lld-systems",
+    "title": "LLD Systems & Design Patterns",
+    "description": "A collection of scalable system designs implementing core design patterns and real-world architectures in C++.",
+    "tech": ["C++", "OOP", "Design Patterns", "SOLID"],
+    "github": "https://github.com/RIshabh231singh-shr/LLD_mini_PROJECTS",
     "live": "#",
     "featured": false,
     "details": [
-      "Designed an intuitive mobile interface for peer-to-peer student commerce.",
-      "Integrated Firebase for real-time database updates and user authentication.",
-      "Implemented a secure category-based search and filter system for product listings."
+      "Implemented multiple design patterns including Observer, Strategy, Decorator, Adapter, Command, and Facade in real-world scenarios.",
+      "Built systems such as a multi-channel notification service combining Observer, Strategy, and Singleton patterns.",
+      "Designed an extensible document editor with abstraction and pluggable persistence layers.",
+      "Focused on SOLID principles and clean architecture for scalable and maintainable codebases."
+    ]
+  },
+  {
+    "id": "snake-game",
+    "title": "Neon Snake Game",
+    "description": "An interactive browser-based game built using JavaScript Canvas with real-time rendering and responsive controls.",
+    "tech": ["JavaScript", "HTML", "CSS", "Canvas API"],
+    "github": "#",
+    "live": "#",
+    "featured": false,
+    "details": [
+      "Developed a browser-based Snake game using Canvas API with smooth rendering and game loop optimization.",
+      "Implemented collision detection, dynamic speed control, and responsive keyboard and touch controls.",
+      "Designed an interactive UI with animations, sound effects, and local storage-based high score tracking."
     ]
   }
 ]

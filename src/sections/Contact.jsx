@@ -54,17 +54,17 @@ export const Contact = () => {
   };
 
   return (
-    <SectionWrapper id="contact" title="Get In Touch." subtitle="04. Communication">
+    <SectionWrapper id="contact" title="Let’s Build Something Scalable." subtitle="04. Contact & Collaboration">
       <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
         
         {/* Left Side */}
         <div className="w-full lg:w-1/2 space-y-10">
           <div className="space-y-4">
             <h3 className="text-3xl font-bold text-primary font-heading tracking-tight leading-tight">
-              Ready for the next <span className="text-accent-cyan italic underline decoration-accent-cyan/10 decoration-wavy underline-offset-8">engineering</span> challenge.
+              Open to solving <span className="text-accent-cyan italic underline decoration-accent-cyan/10 decoration-wavy underline-offset-8">real-world engineering</span> problems.
             </h3>
             <p className="text-secondary text-lg leading-relaxed font-light max-w-lg">
-              I'm actively seeking opportunities to build scalable systems. Whether it's a MERN project or a low-level C++ solution, I'm here to build.
+              I’m actively looking for opportunities to build scalable systems and contribute to impactful products. Whether it’s backend engineering, full-stack development, or system design challenges — I focus on writing efficient, maintainable, and production-ready code.
             </p>
           </div>
 
@@ -89,7 +89,7 @@ export const Contact = () => {
                 <MapPin size={22} />
               </div>
               <div className="flex flex-col">
-                <span className="text-xs font-mono text-secondary uppercase tracking-[0.2em] mb-1">Base Location</span>
+                <span className="text-xs font-mono text-secondary uppercase tracking-[0.2em] mb-1">Location</span>
                 <span className="text-lg font-bold text-primary font-heading">NIT Calicut, Kerala, India</span>
               </div>
             </div>
@@ -137,10 +137,10 @@ export const Contact = () => {
             </div>
             
             <div className="space-y-2">
-              <label className="text-[10px] font-mono text-secondary uppercase tracking-[0.2em] pl-2 font-bold opacity-60">Mission Details</label>
+              <label className="text-[10px] font-mono text-secondary uppercase tracking-[0.2em] pl-2 font-bold opacity-60">Project / Opportunity Details</label>
               <textarea 
                 name="message"
-                placeholder="Briefly describe your proposal or project requirements..." 
+                placeholder="Describe the opportunity, collaboration, or system you’d like to build..." 
                 required
                 rows={4}
                 className="w-full bg-background/50 border border-white/10 focus:border-accent-cyan/50 focus:ring-1 focus:ring-accent-cyan/20 outline-none rounded-2xl px-5 py-4 text-primary text-sm transition-all resize-none"
@@ -158,19 +158,19 @@ export const Contact = () => {
               {status === 'sending' ? (
                 <>
                   <Loader2 size={16} className="mr-3 animate-spin" />
-                  UPLOADING DATA...
+                  SENDING REQUEST...
                 </>
               ) : status === 'success' ? (
                 <>
                   <CheckCircle2 size={16} className="mr-3" />
-                  TRANSMISSION COMPLETE
+                  MESSAGE SENT SUCCESSFULLY
                 </>
               ) : status === 'error' ? (
-                "INTERFERENCE... RETRY"
+                "FAILED... RETRY"
               ) : (
                 <>
                   <MessageSquare size={16} className="mr-3" />
-                  INITIATE TRANSMISSION
+                  SEND MESSAGE
                 </>
               )}
             </Button>

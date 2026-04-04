@@ -29,7 +29,7 @@ export const Hero = () => {
       <SectionWrapper className="pb-12 md:pb-20 relative z-10 w-full mx-auto">
         <div className="flex flex-col xl:flex-row items-center justify-between gap-8 lg:gap-16 w-full">
         
-        {/* Bio Content - Main text on the left on desktop, top on mobile */}
+        {/* Bio Content */}
         <div className="flex-1 text-center xl:text-left space-y-6 md:space-y-8 w-full order-1">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -37,17 +37,23 @@ export const Hero = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           >
             <span className="text-accent-cyan font-mono text-sm tracking-[0.4em] uppercase mb-6 block font-bold">
-              Engineering <span className="opacity-50 italic">at</span> NIT Calicut
+              Software Engineering <span className="opacity-50 italic">Focused</span>
             </span>
+
             <h1 className="text-6xl md:text-8xl font-black font-heading text-primary tracking-tighter leading-[0.85] mb-6">
               {name}<span className="text-accent-cyan">.</span>
             </h1>
             
             <div className="text-2xl md:text-4xl font-bold font-heading text-secondary tracking-tight mb-10 h-[1.2em] flex items-center justify-center md:justify-start gap-3">
-              <span className="opacity-70">I engineer</span>
+              <span className="opacity-70">I build</span>
               <span className="text-primary bg-gradient-to-r from-accent-cyan via-accent-sky to-accent-purple bg-clip-text text-transparent drop-shadow-sm underline decoration-accent-cyan/20 decoration-4 underline-offset-8">
                 <Typewriter
-                  words={['Scalable Backends', 'MERN Applications', 'C++ Systems', 'Optimized Logic']}
+                  words={[
+                    'Scalable Backend Systems',
+                    'Full-Stack Applications',
+                    'Distributed Code Execution Systems',
+                    'High-Performance Logic'
+                  ]}
                   loop={0}
                   cursor
                   cursorStyle="|"
@@ -59,24 +65,24 @@ export const Hero = () => {
             </div>
 
             <p className="text-lg md:text-xl text-secondary max-w-xl mb-12 font-light leading-relaxed mx-auto md:mx-0">
-               Mastering <span className="text-primary font-medium">Data Structures & Algorithms</span> to build high-performance software. Focused on efficiency, clean code, and resilient architecture.
+              Aspiring Software Development Engineer focused on building scalable systems using modern backend architecture, caching strategies, and clean system design. Experienced in developing and deploying full-stack applications with real-world engineering challenges.
             </p>
 
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
               <a href="#projects">
                 <Button variant="glow" size="lg" className="px-10 py-6 font-bold uppercase tracking-widest text-xs">
-                  Explore Systems
+                  View Projects
                 </Button>
               </a>
               <a href="#contact">
                 <Button variant="outline" size="lg" className="px-10 py-6 font-bold uppercase tracking-widest text-xs bg-card hover:bg-card-hover text-primary border-border">
-                  Contact
+                  Contact Me
                 </Button>
               </a>
             </div>
           </motion.div>
 
-          {/* Achievement Stats Bar */}
+          {/* Stats */}
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -87,18 +93,18 @@ export const Hero = () => {
                <span className="text-2xl font-black text-primary font-heading tracking-tighter">
                  <AnimatedCounter value={stats.problems} duration={2} />
                </span>
-               <span className="text-[10px] font-mono text-secondary uppercase tracking-widest">Solved</span>
+               <span className="text-[10px] font-mono text-secondary uppercase tracking-widest">PROBLEMS SOLVED</span>
              </div>
              <div className="flex flex-col border-l border-border pl-12">
                <span className="text-2xl font-black text-primary font-heading tracking-tighter">
                  <AnimatedCounter value={stats.score} duration={2.5} />
                </span>
-               <span className="text-[10px] font-mono text-secondary uppercase tracking-widest">GFG Score</span>
+               <span className="text-[10px] font-mono text-secondary uppercase tracking-widest">GFG SCORE</span>
              </div>
           </motion.div>
         </div>
 
-        {/* Profile Image - Shifted to the right on desktop, bottom on mobile */}
+        {/* Profile Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -120,13 +126,12 @@ export const Hero = () => {
               </div>
             </div>
             
-            {/* Quick Socials Overlay */}
             <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-3 bg-card border border-border shadow-2xl p-2 rounded-2xl backdrop-blur-xl opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-               <a href={socials.github} target="_blank" rel="noreferrer" className="p-3 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl text-secondary hover:text-accent-cyan transition-colors" title="GitHub">
+               <a href={socials.github} target="_blank" rel="noreferrer" className="p-3 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl text-secondary hover:text-accent-cyan transition-colors">
                   <Github size={20} />
                </a>
-               <a href={socials.geeksforgeeks} target="_blank" rel="noreferrer" className="p-3 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl text-secondary hover:text-accent-cyan transition-colors" title="GeeksforGeeks">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.12 16.51c-2.47-.19-4.38-2.27-4.38-4.78 0-2.65 2.15-4.8 4.8-4.8 1.13 0 2.16.4 2.97 1.06l-1.03 1.03c-.53-.43-1.2-.69-1.94-.69-1.55 0-2.8 1.25-2.8 2.8 0 1.4.91 2.58 2.18 2.77v-2.07h1.4v3.68h-1.2zm5.72-3.11c-.53.43-1.2.69-1.94.69-1.55 0-2.8-1.25-2.8-2.8s1.25-2.8 2.8-2.8c.74 0 1.41.26 1.94.69l1.03-1.03c-.81-.66-1.84-1.06-2.97-1.06-2.65 0-4.8 2.15-4.8 4.8s2.15 4.8 4.8 4.8c1.13 0 2.16-.4 2.97-1.06l-1.03-1.03z"/></svg>
+               <a href={socials.geeksforgeeks} target="_blank" rel="noreferrer" className="p-3 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl text-secondary hover:text-accent-cyan transition-colors">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
                </a>
             </div>
           </div>

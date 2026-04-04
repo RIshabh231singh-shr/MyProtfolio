@@ -7,7 +7,11 @@ import { Card } from '../components/Card';
 
 export const Experience = () => {
   return (
-    <SectionWrapper id="experience" title="Professional Timeline." subtitle="03. History">
+    <SectionWrapper 
+      id="experience" 
+      title="Experience & Impact." 
+      subtitle="03. Journey"
+    >
       <div className="relative w-full max-w-[100vw] py-12">
         {/* Horizontal scroll container */}
         <div className="flex overflow-x-auto snap-x snap-mandatory gap-8 md:gap-12 pb-16 pt-12 hide-scrollbar w-full min-h-[400px]">
@@ -27,11 +31,13 @@ export const Experience = () => {
               {/* Dot marker on the timeline */}
               <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 -top-[23px] w-4 h-4 bg-accent-cyan rounded-full shadow-[0_0_15px_rgba(56,189,248,0.8)] z-20 border-4 border-background"></div>
               
-              {/* Vertical branch line connecting dot to card */}
+              {/* Vertical branch line */}
               <div className="absolute left-[31px] md:left-1/2 top-[0] w-[2px] h-12 bg-gradient-to-b from-accent-cyan/50 to-transparent z-10 md:-translate-x-1/2"></div>
 
               {/* Content Card */}
               <Card className="z-20 h-full p-8 border hover:border-accent-cyan/30 transition-all duration-500 hover:-translate-y-1 bg-white/5 dark:bg-white/5 bg-card">
+                
+                {/* Role */}
                 <div className="flex items-center gap-3 mb-6">
                   <span className="p-3 bg-accent-cyan/10 rounded-xl text-accent-cyan shrink-0">
                     <Briefcase size={20} />
@@ -43,6 +49,7 @@ export const Experience = () => {
                   </div>
                 </div>
                 
+                {/* Company + Period */}
                 <div className="flex flex-col gap-3 mb-8 pb-6 border-b border-border">
                   <div className="flex items-center gap-3 text-accent-cyan text-sm font-mono tracking-wider font-semibold">
                     <Building2 size={16} />
@@ -54,6 +61,7 @@ export const Experience = () => {
                   </div>
                 </div>
 
+                {/* Bullet Points */}
                 <ul className="space-y-4">
                   {exp.points.map((bullet, idx) => (
                     <li 
@@ -65,11 +73,12 @@ export const Experience = () => {
                     </li>
                   ))}
                 </ul>
+
               </Card>
             </motion.div>
           ))}
           
-          {/* Spacer to allow scrolling past final item comfortably */}
+          {/* Spacer */}
           <div className="shrink-0 w-8 md:w-24"></div>
         </div>
       </div>

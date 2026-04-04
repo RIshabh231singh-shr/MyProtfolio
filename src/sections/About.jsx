@@ -19,7 +19,11 @@ const iconMap = {
 
 export const About = () => {
   return (
-    <SectionWrapper id="about" title="Engineering Mindset." subtitle="01. Profile">
+    <SectionWrapper 
+      id="about" 
+      title="System-Oriented Engineer." 
+      subtitle="01. About Me"
+    >
       <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start pb-12 overflow-hidden">
         
         {/* Left Column: Bio */}
@@ -31,13 +35,19 @@ export const About = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <p className="text-xl md:text-2xl font-bold font-heading text-primary leading-tight mb-8">
-               {profile.bio}
+              I am an aspiring Software Development Engineer with a strong focus on building scalable full-stack applications, backend systems, and efficient architectures. I specialize in the MERN stack, C++, and system design, with hands-on experience in deploying production-ready applications using modern cloud and caching solutions.
             </p>
+
             <p>
-              Technically rooted in <span className="text-accent-cyan font-medium">B.Tech Civil Engineering</span> at <span className="text-accent-purple font-medium">NIT Calicut</span>, I pivot my analytical mindset toward building scalable backend systems and high-performance full-stack applications.
+              Currently pursuing <span className="text-accent-cyan font-medium">B.Tech in Civil Engineering</span> at <span className="text-accent-purple font-medium">NIT Calicut</span>, I leverage a strong analytical foundation to design scalable backend systems and high-performance full-stack applications with real-world impact.
             </p>
+
             <p>
-              I believe in the power of <span className="text-primary font-medium tracking-tight">Structured Logic</span> and <span className="text-primary font-medium tracking-tight">System Design</span>. My work involves mastering Data Structures & Algorithms, with over <span className="text-accent-cyan font-medium">450+ problems</span> solved across platforms.
+              My approach is driven by <span className="text-primary font-medium tracking-tight">structured problem solving</span> and <span className="text-primary font-medium tracking-tight">system design thinking</span>. I have solved over <span className="text-accent-cyan font-medium">500+ algorithmic problems</span> and actively apply concepts like caching, load balancing, and design patterns to build efficient and scalable systems.
+            </p>
+
+            <p>
+              I have built and deployed multiple production-ready projects, integrating technologies like <span className="text-accent-cyan font-medium">Redis for caching</span>, <span className="text-accent-purple font-medium">Cloudinary for media handling</span>, and distributed APIs for optimized performance. My focus is on writing clean, maintainable code while designing systems that scale.
             </p>
             
             <div className="pt-10 flex flex-wrap items-center gap-10">
@@ -52,7 +62,7 @@ export const About = () => {
                 <span className="text-4xl font-black text-primary font-heading tracking-tighter">
                   <AnimatedCounter value={profile.stats.projects} duration={2} />
                 </span>
-                <span className="text-[10px] font-mono text-secondary uppercase tracking-[0.3em]">ENG. SYSTEMS</span>
+                <span className="text-[10px] font-mono text-secondary uppercase tracking-[0.3em]">ENGINEERED PROJECTS</span>
               </div>
             </div>
 

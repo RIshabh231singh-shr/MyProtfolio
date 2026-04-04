@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ExternalLink, Github, Folder, Sparkles } from 'lucide-react';
 import { SectionWrapper } from '../components/SectionWrapper';
 import { Card } from '../components/Card';
@@ -17,7 +17,11 @@ export const Projects = () => {
   };
 
   return (
-    <SectionWrapper id="projects" title="Core Engineering." subtitle="02. Featured Projects">
+    <SectionWrapper 
+      id="projects" 
+      title="Selected Work & Systems." 
+      subtitle="02. Engineering Projects"
+    >
       <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 md:gap-8 pb-12 pt-4 hide-scrollbar w-full">
         {projectsData.map((project, index) => (
           <motion.div
@@ -31,9 +35,12 @@ export const Projects = () => {
           >
             <Card className={cn(
               "group h-full flex flex-col p-8 border hover:border-accent-cyan/30 transition-all duration-500",
-              project.featured ? "border-accent-cyan/20 ring-1 ring-accent-cyan/10 shadow-[0_0_30px_rgba(56,189,248,0.05)]" : "border-border"
+              project.featured 
+                ? "border-accent-cyan/20 ring-1 ring-accent-cyan/10 shadow-[0_0_30px_rgba(56,189,248,0.05)]" 
+                : "border-border"
             )}>
-              {/* Project Icon Header */}
+              
+              {/* Header */}
               <div className="flex items-center justify-between mb-8">
                 <div className="p-4 bg-accent-cyan/5 rounded-2xl text-accent-cyan group-hover:bg-accent-cyan group-hover:text-background transition-all duration-500">
                   {project.featured ? <Sparkles size={24} /> : <Folder size={24} />}
@@ -54,10 +61,13 @@ export const Projects = () => {
                 </p>
               </div>
 
-              {/* Tech Stack Pills */}
+              {/* Tech Stack */}
               <div className="flex flex-wrap gap-2 mt-auto">
                 {project.tech.map((t) => (
-                  <span key={t} className="px-3 py-1 bg-black/5 dark:bg-white/5 rounded-lg text-[10px] font-mono text-secondary uppercase tracking-widest border border-border">
+                  <span 
+                    key={t} 
+                    className="px-3 py-1 bg-black/5 dark:bg-white/5 rounded-lg text-[10px] font-mono text-secondary uppercase tracking-widest border border-border"
+                  >
                     {t}
                   </span>
                 ))}
