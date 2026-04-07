@@ -82,7 +82,7 @@ export const About = () => {
         </div>
 
         {/* Right Column: Skills Grid */}
-        <div className="w-full lg:w-1/2 grid grid-cols-1 gap-8 relative max-h-[800px] overflow-y-auto pr-4 hide-scrollbar py-4">
+        <div className="w-full lg:w-1/2 grid grid-cols-1 gap-8 relative max-h-[800px] overflow-y-auto pr-4 hide-scrollbar scroll-contained py-4">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-accent-cyan/10 blur-[100px] rounded-full pointer-events-none"></div>
           
           {skillsData.map((skillGroup, index) => {

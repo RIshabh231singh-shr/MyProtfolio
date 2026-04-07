@@ -47,7 +47,21 @@ export const Navbar = () => {
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
   };
 
+
+
+  // Close menu on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && isOpen) setIsOpen(false);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen]);
+
+  const closeMenu = () => setIsOpen(false);
+
   return (
+    <>
     <nav className={cn(
       "fixed top-0 left-0 right-0 z-[1000] transition-all duration-500 py-4",
       scrolled ? "bg-background/80 backdrop-blur-xl border-b border-white/5 py-3" : "bg-transparent"
@@ -104,39 +118,66 @@ export const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile */}
+        {/* Mobile Controls — hamburger button always at z-[1001], above menu overlay */}
         <div className="flex items-center gap-4 lg:hidden">
-          <button onClick={toggleTheme} className="p-2 text-secondary">
+          <button onClick={toggleTheme} className="p-2 text-secondary z-[1001] relative">
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           <button 
-            onClick={() => setIsOpen(!isOpen)}
-            className="p-2 text-primary hover:text-accent-cyan transition-colors"
+            onClick={() => setIsOpen(prev => !prev)}
+            className="relative z-[1001] p-2 text-primary hover:text-accent-cyan transition-colors"
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isOpen}
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            <AnimatePresence mode="wait" initial={false}>
+              {isOpen ? (
+                <motion.span
+                  key="close"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="block"
+                >
+                  <X size={28} />
+                </motion.span>
+              ) : (
+                <motion.span
+                  key="open"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="block"
+                >
+                  <Menu size={28} />
+                </motion.span>
+              )}
+            </AnimatePresence>
           </button>
         </div>
       </div>
+    </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu — z-[999] so the hamburger button (z-[1000] inside nav) stays above and clickable */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 top-0 bg-background z-[900] lg:hidden flex flex-col items-center justify-center gap-12 p-8"
+            transition={{ type: 'spring', damping: 30, stiffness: 250 }}
+            className="fixed inset-0 top-0 bg-background z-[999] lg:hidden flex flex-col items-center justify-center gap-12 p-8"
           >
             <div className="flex flex-col items-center gap-10 w-full">
               {navLinks.map((link, idx) => (
                 <motion.a
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 * idx }}
+                  transition={{ delay: 0.05 + 0.08 * idx }}
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={closeMenu}
                   className="w-full text-5xl font-black font-heading text-primary hover:text-accent-cyan transition-colors flex flex-col items-center gap-2"
                 >
                   <span className="text-sm font-mono text-accent-cyan opacity-80 mb-1">{link.id}.</span>
@@ -154,6 +195,6 @@ export const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   );
 };
